@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ray Town | Luxury Indian Hotel</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/bootstrap.bundle.js" defer></script>
+
+  <!-- Calligraphic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Dancing Script', cursive;
+      background: #fdf7f0;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------------- NAVBAR ---------------- */
+    .navbar {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.95);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    }
+    .navbar-brand {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      color: #f9d342 !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    .navbar-brand img {
+      height: 45px;
+      border-radius: 10px;
+      animation: logoFloat 3s ease-in-out infinite alternate;
+    }
+    @keyframes logoFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-3px); }
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin: 0 10px;
+      position: relative;
+      transition: 0.3s ease;
+      font-family: 'Dancing Script', cursive;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #f9d342;
+      left: 50%;
+      bottom: 0;
+      transition: 0.3s ease;
+      transform: translateX(-50%);
+    }
+    .nav-link:hover::after {
+      width: 60%;
+    }
+    .nav-link:hover {
+      color: #f9d342 !important;
+      transform: scale(1.1);
+    }
+
+    /* ---------------- CAROUSEL ---------------- */
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    /* ---------------- GENERAL ---------------- */
+    section {
+      padding: 80px 0;
+    }
+    h2.section-title {
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 50px;
+      color: #333;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .highlight {
+      color: #f9d342;
+    }
+
+    /* ---------------- AMENITIES ---------------- */
+    .amenity-icon {
+      font-size: 40px;
+      color: #f9d342;
+      margin-bottom: 10px;
+    }
+    .amenity-box {
+      text-align: center;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      font-family: 'Dancing Script', cursive;
+    }
+    .amenity-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 40px 0 10px;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    /* ---------------- Fade-in Paragraphs ---------------- */
+    p, h1, h5, blockquote, footer p {
+      font-family: 'Dancing Script', cursive;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Ray Town Logo" /> Ray Town
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div id="hotelCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/slider/slide1.jpg" class="d-block w-100" alt="Luxury Suite">
+        <div class="carousel-caption">
+          <h1>Welcome to <span class="highlight">Ray Town</span></h1>
+          <p>Experience luxury and tradition in the heart of India.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slider/slide2.jpg" class="d-block w-100" alt="Comfort Rooms">
+        <div class="carousel-caption">
+          <h1>Elegant Rooms</h1>
+          <p>Designed for your comfort and peace.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <div class="container">
+      <h2 class="section-title">About Ray Town</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/about.jpg" class="img-fluid rounded-4 shadow" alt="About Ray Town">
+        </div>
+        <div class="col-md-6">
+          <p>Ray Town is a luxurious Indian hotel combining royal heritage with modern comfort. Nestled in a serene landscape, we offer world-class amenities and personalized hospitality to make your stay unforgettable.</p>
+          <p>Whether you’re on a family vacation or a business trip, Ray Town ensures an elegant experience inspired by India’s timeless beauty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Rooms -->
+  <section id="rooms" class="bg-light fade-in">
+    <div class="container">
+      <h2 class="section-title">Featured Rooms</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/rooms/room1.jpg" class="card-img-top" alt="Luxury Suite">
+            <div class="card-body">
+              <h5>Royal Suite</h5>
+              <p>Lavish interiors and a private balcony overlooking the city.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/rooms/room2.jpg" class="card-img-top" alt="Deluxe Room">
+            <div class="card-body">
+              <h5>Deluxe Room</h5>
+              <p>Modern design, cozy lighting, and premium bedding for your comfort.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/rooms/room3.jpg" class="card-img-top" alt="Suite">
+            <div class="card-body">
+              <h5>Family Suite</h5>
+              <p>Spacious and elegant suite ideal for families or groups.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section id="amenities" class="fade-in">
+    <div class="container">
+      <h2 class="section-title">Our Amenities</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="amenity-box">
+            <i class="fa-solid fa-spa amenity-icon"></i>
+            <h6>Spa & Wellness</h6>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="amenity-box">
+            <i class="fa-solid fa-utensils amenity-icon"></i>
+            <h6>Fine Dining</h6>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="amenity-box">
+            <i class="fa-solid fa-wifi amenity-icon"></i>
+            <h6>Free Wi-Fi</h6>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="amenity-box">
+            <i class="fa-solid fa-car amenity-icon"></i>
+            <h6>Airport Pickup</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews" class="bg-light fade-in">
+    <div class="container">
+      <h2 class="section-title">Guest Reviews</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>“Absolutely loved my stay! The staff were so courteous.”</p>
+            <footer>— Anjali Mehra</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>“Beautiful interiors and an unforgettable dining experience.”</p>
+            <footer>— Ramesh Kapoor</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>“One of the most elegant hotels I’ve ever stayed at!”</p>
+            <footer>— Emily Brown</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="fade-in text-center" style="background:#f9d342; color:#111;">
+    <div class="container">
+      <h2 class="section-title">Book Your Stay Today</h2>
+      <p>Luxury awaits you at Ray Town — Reserve your experience now!</p>
+      <a href="contact.html" class="btn btn-dark btn-lg mt-3">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>© 2025 Ray Town Hotel | Designed with ❤️ in India</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll animation
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Fade-in animation on scroll
+    const fadeEls = document.querySelectorAll(".fade-in");
+    window.addEventListener("scroll", () => {
+      fadeEls.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

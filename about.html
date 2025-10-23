@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Ray Town Hotel</title>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/bootstrap.bundle.js" defer></script>
+
+<style>
+/* ===== NAVBAR ===== */
+.navbar { background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); transition: all 0.4s ease;}
+.navbar.scrolled { background: rgba(0,0,0,0.95); box-shadow: 0 2px 15px rgba(0,0,0,0.5);}
+.navbar-brand { font-family:"Brush Script MT", cursive; font-size:1.8rem; color:#f9d342 !important; display:flex; align-items:center; gap:10px; text-shadow:1px 1px 3px rgba(0,0,0,0.3);}
+.navbar-brand img { height:45px; border-radius:10px;}
+.nav-link { color:#fff !important; margin:0 10px; font-weight:500; position:relative; transition:0.3s;}
+.nav-link::after { content:""; position:absolute; width:0%; height:2px; background:#f9d342; left:50%; bottom:0; transform:translateX(-50%); transition:0.3s;}
+.nav-link:hover::after { width:60%; } .nav-link:hover { color:#f9d342 !important; transform:scale(1.1);}
+.navbar-toggler { border:none; background:none; } .navbar-toggler:focus { box-shadow:none; }
+
+/* ===== HERO BANNER ===== */
+.hero-banner { position:relative; width:100%; height:60vh; background:url('images/about-hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center;}
+.hero-banner::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4);}
+.hero-text { position:relative; color:#fff; text-align:center;}
+.hero-text h1 { font-size:3rem; font-weight:700; text-shadow:2px 2px 6px rgba(0,0,0,0.6);}
+.hero-text p { font-size:1.2rem; margin-top:15px; }
+
+/* ===== SECTIONS ===== */
+section { padding:80px 0; }
+h2.section-title { text-align:center; font-family:"Playfair Display", serif; margin-bottom:50px; color:#333; font-weight:600; }
+
+/* ===== HISTORY / TIMELINE ===== */
+.timeline { position:relative; max-width:900px; margin:auto;}
+.timeline::after { content:''; position:absolute; width:6px; background:#f9d342; top:0; bottom:0; left:50%; transform:translateX(-50%);}
+.timeline-item { padding:20px 40px; position:relative; width:50%; }
+.timeline-item.left { left:0; }
+.timeline-item.right { left:50%; }
+.timeline-item::after { content:''; position:absolute; width:20px; height:20px; background:#f9d342; border-radius:50%; top:20px; right:-10px; z-index:1;}
+.timeline-item.right::after { left:-10px; }
+.timeline-item-content { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
+.timeline-item-content h4 { font-weight:600; color:#f9d342; }
+.timeline-item-content p { margin-top:10px; color:#555; }
+
+/* ===== MISSION/VISION/VALUES ===== */
+.mission-box { text-align:center; padding:30px; background:#fff; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.3s;}
+.mission-box:hover { transform:translateY(-5px); box-shadow:0 6px 20px rgba(0,0,0,0.15);}
+.mission-icon { font-size:40px; color:#f9d342; margin-bottom:10px;}
+
+/* ===== TEAM ===== */
+.team-card { transition: transform 0.3s, box-shadow 0.3s; margin-bottom:30px;}
+.team-card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+.team-card img { border-radius:10px; }
+
+/* ===== GALLERY ===== */
+.gallery img { border-radius:10px; transition: transform 0.3s; }
+.gallery img:hover { transform:scale(1.05); }
+
+/* ===== CTA ===== */
+.cta-section { background:#f9d342; color:#111; text-align:center; padding:60px 20px;}
+.cta-section .btn { font-size:1.3rem; padding:12px 30px; }
+
+/* ===== FOOTER ===== */
+footer { background:#111; color:#fff; padding:40px 0 10px; text-align:center; }
+
+/* ===== ANIMATIONS ===== */
+.fade-in { opacity:0; transform:translateY(30px); transition:all 0.8s ease;}
+.fade-in.visible { opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">
+<img src="images/logo.png" alt="Ray Town Logo"> Ray Town
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+<li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurant</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO BANNER -->
+<div class="hero-banner">
+<div class="hero-text fade-in">
+<h1>About Ray Town</h1>
+<p>Luxury, Heritage, and Exceptional Hospitality</p>
+</div>
+</div>
+
+<!-- HISTORY / TIMELINE -->
+<section id="history" class="fade-in">
+<div class="container">
+<h2 class="section-title">Our Story</h2>
+<div class="timeline">
+  <div class="timeline-item left">
+    <div class="timeline-item-content">
+      <h4>1984 - Founded</h4>
+      <p>Ray Town Hotel was founded by Ravi Yadav with a vision to bring royal Indian hospitality to every guest. Starting with just 12 rooms, the journey of excellence began.</p>
+    </div>
+  </div>
+  <div class="timeline-item right">
+    <div class="timeline-item-content">
+      <h4>1990 - Expansion</h4>
+      <p>With growing popularity, the hotel expanded its rooms and added a fine-dining restaurant offering authentic Indian cuisine.</p>
+    </div>
+  </div>
+  <div class="timeline-item left">
+    <div class="timeline-item-content">
+      <h4>2000 - Luxury Suites</h4>
+      <p>Introduced the first set of luxury suites, blending contemporary comfort with traditional Indian architecture and decor.</p>
+    </div>
+  </div>
+  <div class="timeline-item right">
+    <div class="timeline-item-content">
+      <h4>2010 - Wellness & Spa</h4>
+      <p>Opened the award-winning spa and wellness center, providing holistic relaxation experiences for all guests.</p>
+    </div>
+  </div>
+  <div class="timeline-item left">
+    <div class="timeline-item-content">
+      <h4>2020 - Global Recognition</h4>
+      <p>Ray Town became internationally recognized for exceptional hospitality, hosting dignitaries and travelers worldwide.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- MISSION / VISION / VALUES -->
+<section id="mission" class="bg-light fade-in">
+<div class="container">
+<h2 class="section-title">Mission, Vision & Values</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="mission-box">
+<i class="fa-solid fa-bullseye mission-icon"></i>
+<h5>Mission</h5>
+<p>To provide luxury hospitality with personalized care, blending Indian tradition and modern comfort.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mission-box">
+<i class="fa-solid fa-eye mission-icon"></i>
+<h5>Vision</h5>
+<p>To be recognized globally as the epitome of Indian luxury hotels while promoting culture and elegance.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mission-box">
+<i class="fa-solid fa-heart mission-icon"></i>
+<h5>Values</h5>
+<p>Integrity, Excellence, Respect, Warmth, and Commitment to guest satisfaction.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="fade-in">
+<div class="container">
+<h2 class="section-title">Meet Our Team</h2>
+<div class="row g-4">
+<div class="col-md-3">
+<div class="card team-card">
+<img src="images/team/team1.jpg" class="card-img-top" alt="Ravi Yadav">
+<div class="card-body"><h5>Ravi Yadav</h5><p>Founder & CEO</p></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card team-card">
+<img src="images/team/team2.jpg" class="card-img-top" alt="Anjali Mehra">
+<div class="card-body"><h5>Anjali Mehra</h5><p>General Manager</p></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card team-card">
+<img src="images/team/team3.jpg" class="card-img-top" alt="Ramesh Kapoor">
+<div class="card-body"><h5>Ramesh Kapoor</h5><p>Head Chef</p></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card team-card">
+<img src="images/team/team4.jpg" class="card-img-top" alt="Priya Singh">
+<div class="card-body"><h5>Priya Singh</h5><p>Guest Relations</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- GALLERY TEASER -->
+<section id="gallery" class="bg-light fade-in">
+<div class="container">
+<h2 class="section-title">Our Experience</h2>
+<div class="row g-3 gallery">
+<div class="col-md-4"><img src="images/gallery/gallery1.jpg" class="img-fluid" alt="Gallery 1"></div>
+<div class="col-md-4"><img src="images/gallery/gallery2.jpg" class="img-fluid" alt="Gallery 2"></div>
+<div class="col-md-4"><img src="images/gallery/gallery3.jpg" class="img-fluid" alt="Gallery 3"></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section fade-in">
+<h2>Ready to Experience Luxury?</h2>
+<p>Explore our rooms and reserve your stay today!</p>
+<a href="rooms.html" class="btn btn-dark">Book Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container text-center">
+<p>© 2025 Ray Town Hotel | Designed with ❤️ in India</p>
+</div>
+</footer>
+
+<script>
+// Navbar scroll animation
+window.addEventListener("scroll", function() {
+const navbar = document.querySelector(".navbar");
+if(window.scrollY > 50) navbar.classList.add("scrolled");
+else navbar.classList.remove("scrolled");
+});
+
+// Fade-in on scroll
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+entries.forEach(entry=>{
+if(!entry.isIntersecting) return;
+entry.target.classList.add("visible");
+appearOnScroll.unobserve(entry.target);
+});
+}, appearOptions);
+faders.forEach(fader=>{appearOnScroll.observe(fader);});
+</script>
+
+</body>
+</html>
